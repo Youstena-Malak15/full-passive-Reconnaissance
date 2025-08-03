@@ -11,7 +11,7 @@ A modular Bash-based framework that performs comprehensive passive reconnaissanc
 - get application and antivirus info
 - Saves all output in organized folders per target  
 
-
+```
 ## Folder Structure
 
 full-passive-reconnaissance/
@@ -24,19 +24,19 @@ full-passive-reconnaissance/
 ├── ultimate-recon.sh  # Main script to run the full recon
 ├── README.md          # This documentation
 
-
+```
 ## Requirements
 
 Install these tools before running the framework:
 1) sudo apt update
 2) sudo apt install -y golang whois dnsutils dnsrecon theharvester
-3) Install recon tools via Go:
-   go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-   go install -v github.com/tomnomnom/assetfinder@latest    
-   go install -v github.com/owasp-amass/amass/v4/...@latest 
-4) Make sure Go binaries are in your PATH: export PATH=$PATH:$(go env GOPATH)/bin
-
-5) Hunter.io API Key (Required for email.sh) so Register at hunter.io to get your API then placeholder with your key in this line: API_KEY="YOUR_API_KEY_HERE" If no key is provided, the Hunter.io part of the email module will be skipped.
+3) go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+4) go install -v github.com/tomnomnom/assetfinder@latest    
+5) go install -v github.com/owasp-amass/amass/v4/...@latest 
+6) Make sure Go binaries are in your PATH: export PATH=$PATH:$(go env GOPATH)/bin
+7) Hunter.io API Key (Required for email.sh) so Register at hunter.io to get your API
+8) put your API key in this line: API_KEY="YOUR_API_KEY_HERE" 
+# If no key is provided, the Hunter.io part of the email module will be skipped.
 
 ##How to Run
 1) Make scripts executable by chmod +x /*.sh
